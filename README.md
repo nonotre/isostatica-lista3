@@ -5,7 +5,7 @@ Resolução dos exercícios 01 a 14, com reações externas e internas, diagrama
 | Arquivo | Conteúdo |
 |---|---|
 | [lista3-completa.pdf](lista3-completa.pdf) | tudo num PDF só: índice, o que conferir e os 14 exercícios |
-| [CONFERIR.md](CONFERIR.md) | leituras da figura e hipóteses que valem conferir antes de usar |
+| [CONFERIR.md](CONFERIR.md) | como cada símbolo da figura foi lido (conferido com o PDF ampliado) e o que ainda depende de convenção |
 
 | Ex | Estrutura | Texto | PDF |
 |---|---|---|---|

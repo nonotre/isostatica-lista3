@@ -1,58 +1,76 @@
 # O que conferir
 
-Cada item é uma leitura da figura ou uma hipótese que a resolução adotou. Se a leitura estiver errada, os valores mudam. Os mais importantes estão primeiro.
+Todas as leituras da figura foram conferidas ampliando o PDF da lista a 600 dpi (`pdftoppm -r 600 -png lista03.pdf`) e olhando cada apoio, rótula, luva, seta e cota de perto. O que segue é o que a ampliação mostrou, e o pouco que ainda depende da convenção do professor.
 
-## Prioridade alta
+## Símbolos da lista e como foram lidos
 
-Leituras que mudam reações e diagramas e que o desenho não deixa 100% claras.
-
-| Ex | Leitura adotada | O que muda se for outra |
+| Símbolo no desenho | Leitura | Onde aparece |
 |---|---|---|
-| 09 | O símbolo em B (barra horizontal entre dois traços horizontais no topo da coluna) foi lido como **luva**: passa força vertical e momento, não passa força horizontal. Com isso o **tirante sai com força zero**. | Se B for **rótula**, as reações externas continuam iguais, mas o tirante fica comprimido com 10 kN, M<sub>B</sub> = 0 e o momento em D vai a 84 kN.m. Os diagramas só foram feitos para a luva (a alternativa está numa nota no fim da seção 2 do ex09). Um tirante desenhado e sem força é estranho, então essa é a dúvida principal da lista. |
-| 10 | O mesmo símbolo em D (topo da coluna CD) foi lido como **luva** que não passa força horizontal, então H<sub>E</sub> = 0. | Se D for **rótula**, a estrutura continua isostática (pórtico triarticulado A, D, E) e todas as reações mudam. O texto do ex10 diz que a luva é a única leitura isostática, mas isso só vale comparando com um rolete, já que a rótula também daria isostática. |
-| 12 | Os dois traços verticais no topo do pilar (C) foram lidos como **luva** que não passa força vertical, então a viga CD descarrega tudo em D (V<sub>D</sub> = 20 kN) e o pilar fica com momento constante de 40 kN.m. | Se C for **rótula**, a estrutura também é isostática, a viga CD vira biapoiada (10 kN em cada ponta) e todos os esforços mudam. |
-| 03 | A carga de 10 kN/m vai de x = 4 até x = 10 (a última seta fica sobre o apoio C). O balanço de 10 a 12 fica **sem carga**, com V = M = 0. | Se a carga for até a ponta (x = 12), o balanço passa a ter momento e V<sub>C</sub> muda. |
-| 05 | A e B foram lidos como **apoios móveis** (triângulo sobre uma linha separada da hachura, igual ao apoio móvel do ex01). O círculo em D é a ponta de uma **biela horizontal** presa na parede. | Com A e B fixos a estrutura seria hiperestática, o que reforça a leitura. Ainda assim, vale olhar o símbolo. |
-| 01 | O momento de 36 kN.m em x = 2 foi lido como **horário**. | Se for anti-horário, mudam V<sub>A</sub>, V<sub>B</sub> e todo o trecho AC dos diagramas. |
-| 07 | O momento de 80 kN.m em D foi lido como **anti-horário** (o arco passa por baixo do ponto e a seta sobe pela direita). | Se for horário, mudam M<sub>E</sub> e o momento no pendural e na viga. |
+| Triângulo com a hachura colada na base | Apoio fixo (2º gênero): reações H e V | 01 A, 06 A, 08 A e C, 09 A, 10 A e E, 11 A e E, 12 A, 13 B |
+| Triângulo sobre uma linha, com folga até a hachura | Apoio móvel (1º gênero): só V | 01 B e D, 02 D e E, 05 A e B, 06 B, 09 C, 12 D, 13 D e F. No 03 o apoio C tem dois roletes desenhados |
+| Parede ou piso hachurado colado na ponta da barra | Engaste: H, V e M | 02 A, 03 A, 04 E, 07 E |
+| Círculo vazio na barra | Rótula: passa H e V, M = 0 | 01 C, 02 B e C, 03 B, 06 C, 08 B, 11 B, 13 E |
+| Círculo na barra com uma linha fina até outro círculo | Biela ou tirante (barra biarticulada, só força axial). A barra principal segue contínua | 05 D, 06 D e E (tirante), 09 H1 e E (tirante), 12 B, 14 A (duas) e C |
+| Ponta de uma barra entre dois traços paralelos | Luva (engaste deslizante): passa momento e a força perpendicular aos traços, não passa a força paralela aos traços | 09 B e 10 D (traços horizontais), 12 C (traços verticais) |
+| Barras que dobram ou se cruzam sem círculo | Nó rígido | 04 C, 05 C e D, 07 A e C, 08 E, 09 D, 10 C, 11 C, 12 B, 13 C, 14 B |
 
-## Cargas em barras inclinadas e peso próprio
+## Pontos que estavam em dúvida
+
+| Ex | Dúvida | O que a ampliação mostrou | Consequência |
+|---|---|---|---|
+| 09 | B é luva ou rótula? Com luva o tirante fica com força zero. | Dois traços horizontais nítidos, um acima e outro abaixo da ponta arredondada da barra, e o topo da coluna preso ao traço de baixo. Nenhum círculo em B. A é fixo (hachura colada) e C é móvel (folga). | A leitura de luva é a que está desenhada. T = 0 sai direto de ΣF<sub>x</sub> da coluna, porque a luva não passa força horizontal. O resultado é inusitado, mas é o que o desenho dá. Com rótula o tirante ficaria comprimido (−10 kN), que é tão estranho quanto. A única leitura em que ele trabalha tracionado (5 kN) exigiria C fixo e B rolete, e nenhum dos dois está desenhado assim. |
+| 10 | D é luva ou rótula? | Ponta da viga entre dois traços horizontais, coluna presa ao de baixo. Sem círculo. A e E fixos. | Luva confirmada. H<sub>E</sub> = 0. A rótula também daria isostática, mas não é o símbolo desenhado. |
+| 12 | C é luva ou rótula? Em que direção desliza? | Dois traços verticais, um de cada lado do topo do pilar, e a viga chega presa ao traço da direita. Sem círculo. A fixo, D móvel. | Luva que desliza na vertical: não passa força vertical. V<sub>D</sub> = 20 kN e pilar com momento constante de 40 kN.m. |
+| 03 | A carga vai até C ou até a ponta? | A última seta fica sobre o círculo do apoio C. A faixa mede 6 m na escala do desenho, de x = 4 até x = 10. | Balanço de 10 a 12 sem carga, com V = M = 0. |
+| 05 | A e B são fixos ou móveis? | Os dois têm o triângulo sobre uma linha com folga até a hachura, igual ao apoio móvel B do ex01. O canto D é rígido e o círculo em D é a ponta de uma biela horizontal presa à parede. | A e B móveis, biela em D. Com A e B fixos seria hiperestática. |
+| 01 | O momento de 36 kN.m é horário? | O arco começa em cima, passa pela direita e termina embaixo com a seta apontando para a esquerda. | Horário, como foi usado. |
+| 07 | O momento de 80 kN.m é anti-horário? | O arco começa à esquerda, passa por baixo e termina à direita com a seta apontando para cima. | Anti-horário, como foi usado. |
+| 02 | D e E são móveis? | Os dois têm folga entre a linha e a hachura. | Móveis. Não mudaria nada se fossem fixos, porque não há carga horizontal. |
+| 13 | Sentido do binário, cruzamento em C, começo da carga | A seta de cima aponta para a direita e toca o topo da barra, a de baixo aponta para a esquerda e toca a ponta de baixo. A cruz em C não tem círculo. O triângulo da carga começa em zero sobre D. B fixo, D e F móveis, E rótula. | Binário horário de 40 kN.m, nó rígido em C. |
+| 06 | Apoios, cumeeira, pontos do tirante | A fixo, B móvel. Em C há um círculo com as duas pontas das barras dentro: rótula. Em D e E o círculo fica encostado na barra, que segue contínua, com a linha do tirante saindo dele. | Como foi usado. |
+| 08 | Apoios, B, nó E | A e C fixos. B tem círculo entre a barra inclinada e a viga. Em E a coluna passa contínua e a viga chega nela. | Como foi usado. |
+| 11 | Apoios, B, nó C | A e E fixos. B com círculo. Em C o pilar atravessa a viga sem círculo. | Como foi usado. |
+| 14 | Ligações em A e C | Em A, um círculo na parede e um no teto, cada um com uma linha fina até o círculo em A. Em C, um círculo no teto com uma linha fina até o círculo em C. B é canto rígido. | Duas bielas em A, uma em C. |
+| 04 | B é rótula? Base é engaste? | Em B não há círculo, só a linha de cota do começo da carga. Em E o pilar encosta direto na hachura. | Nó rígido em B, engaste em E. |
+
+## O que ainda depende do professor
+
+Aqui a ampliação não decide. São convenções, e as adotadas são as usuais.
 
 | Ex | Hipótese | O que muda se for outra |
 |---|---|---|
-| 08 | A faixa de 10 kN/m (x = 0 a 10) é **por metro de projeção horizontal**, então a barra inclinada DB recebe 40 kN (8 kN/m por metro de barra). | Por metro de comprimento, DB receberia 50 kN. |
-| 09 | A faixa de 10 kN/m (x = 0 a 6) é **por metro de projeção horizontal**, 30 kN sobre a barra inclinada. | Por metro de comprimento, a barra inclinada receberia 50 kN. |
-| 10 | A carga horizontal de 10 kN/m é **por metro de altura** (0 a 5 m), 30 kN na barra inclinada AC e 20 kN na coluna CD. | Por metro de comprimento de AC (5 m), a barra receberia 50 kN. |
-| 11 | O peso próprio de 10 kN/m é vertical e **por metro de comprimento real** de cada barra (AB 50 kN, BE 40 kN, CD 50 kN). | É a leitura padrão para peso, então tem pouca chance de estar errada. |
-| 14 | O peso próprio de 12 kN/m é vertical e **por metro de comprimento real** (AB 36 kN, BC 60 kN). | Mesma observação do 11. |
+| 08 | A faixa de 10 kN/m é desenhada horizontal, com as setas igualmente espaçadas em x: **por metro de projeção horizontal**. A barra inclinada DB recebe 40 kN. | Por metro de comprimento, DB receberia 50 kN. |
+| 09 | Mesma leitura: 30 kN sobre a barra inclinada. | Por metro de comprimento, seriam 50 kN. |
+| 10 | A carga horizontal é desenhada numa faixa vertical cotada em altura: **por metro de altura**. 30 kN na barra inclinada AC e 20 kN na coluna. | Por metro de comprimento de AC, seriam 50 kN na barra. |
+| 11 e 14 | Peso próprio vertical e **por metro de comprimento real** da barra. | É a leitura padrão para peso. |
+| 09 | Com a luva, o tirante fica sem força. | A conta é curta e fecha, mas é o ponto mais provável de divergir de um gabarito. Se o gabarito der força no tirante, olhar como ele leu o símbolo em B. |
 
-## Outras leituras por exercício
+## Sinais de V e N nos pórticos
 
-Têm menos chance de estar erradas, mas valem uma olhada rápida comparando com a figura da lista.
+Todos os exercícios usam a mesma regra. Cada barra recebe um sentido de percurso e vale a convenção de viga girada junto com a barra:
 
-- **01:** A apoio fixo, B e D móveis, rótula em C.
-- **02:** engaste em A, rótulas em B e C, D e E móveis (os dois têm o mesmo símbolo). As duas forças de 10 kN ficam em x = 2 e x = 6, nas pontas da primeira carga distribuída. Se D ou E fosse fixo nada mudaria, porque não há carga horizontal.
-- **04:** o ponto em B é só o começo da carga distribuída, não é rótula (se fosse, a estrutura viraria um mecanismo). Engaste em E e canto C rígido.
-- **05:** a carga de 40 kN/m cobre toda a altura do pilar esquerdo (A até o topo, 4 m) e a de 20 kN/m cobre toda a viga.
-- **06:** A fixo e B móvel. Os círculos em D e E são a ligação do tirante, e as barras seguem contínuas ali. A carga de 10 kN em C foi posta no pino, o que não muda os diagramas.
-- **07:** a força de 5 kN em D aponta para a esquerda e a carga de 10 kN/m cobre os 4 m do pilar.
-- **08:** A e C fixos, rótula em B, nó E rígido e força de 20 kN no topo F.
-- **09:** A fica 2 m acima de C. Os semicírculos na barra inclinada (x = 1,5 m, altura 4 m) e na coluna foram lidos como as pontas de um tirante. A força de 6 kN cai no canto D e a de 20 kN horizontal no meio da barra inclinada. A é fixo e C é móvel.
-- **10:** A e E fixos.
-- **11:** A e E fixos, rótula em B, nó C rígido.
-- **12:** A fixo, biela horizontal em B, D móvel. A carga de 5 kN/m fica só nos 4 m da viga CD.
-- **13:** o cruzamento em C é rígido (se fosse rótula, a barra vertical giraria). B é fixo, D e F são móveis, a rótula fica em E e a carga triangular vai de 0 em D até 20 kN/m na ponta G. O binário de 40 kN.m é horário.
-- **14:** as ligações em A (vertical e horizontal) e em C (vertical) foram lidas como bielas articuladas. Tratar B como rígido ou rótula dá o mesmo resultado, porque M<sub>B</sub> = 0.
+- N positivo de tração
+- V positivo quando a resultante das forças da parte já percorrida aponta para a **esquerda** de quem caminha no sentido do percurso (numa viga percorrida da esquerda para a direita, é "para cima")
+- M positivo traciona o lado **direito** do percurso. O diagrama de M é desenhado do lado tracionado, então ele não depende de convenção e pode ser comparado direto com qualquer gabarito
 
-## Convenções de sinal
+O que muda de um exercício para outro é só o percurso escolhido em cada barra. Se o sinal de V de uma barra sair trocado em relação ao gabarito, é porque o percurso foi o contrário: basta inverter o sinal. Os percursos usados:
 
-- **M** é sempre desenhado do lado tracionado. Nas vigas, M positivo (traciona embaixo) fica embaixo do eixo. O desenho de M não depende de convenção, então pode ser comparado direto com a solução do professor.
-- **V e N** nos pórticos usam um sentido de percurso por barra, explicado na seção de esforços de cada exercício. **A convenção não é a mesma em todos os exercícios**, porque cada um foi resolvido separadamente. Os módulos e os lados batem, mas um sinal de V pode aparecer trocado em relação ao que o professor usa. Vale conferir a convenção da disciplina antes de comparar os sinais.
-- N positivo é tração em todos os exercícios.
+| Ex | Percursos |
+|---|---|
+| 04 | viga A → C, pilar C → E (descendo) |
+| 05 | pilar esquerdo A → C → E (subindo), viga C → D, pilar direito D → B (descendo) |
+| 07 | pilar T → A (descendo), viga A → E, pendural D → C (subindo) |
+| 08 | A → D, D → B, B → E, coluna C → E (subindo), E → F |
+| 09 | A → D (barra inclinada), D → B (viga), coluna C → B (subindo), balanço E → ponta, tirante H1 → E |
+| 10 | A → C, C → D (subindo), D → E |
+| 11 | A → B, B → E, pilar C → D (subindo) |
+| 12 | A → B, pilar B → C (subindo), C → D |
+| 13 | viga A → G, barra vertical Q → P (subindo) |
+| 14 | A → B (descendo), B → C |
 
 ## Como os resultados foram conferidos
 
-- Cada `exNN.py` calcula as reações com frações exatas e confere o equilíbrio global (ΣF<sub>x</sub>, ΣF<sub>y</sub> e ΣM).
-- Também foram conferidos M = 0 nas rótulas, pontas livres e apoios de extremidade, e o equilíbrio de momentos nos nós dos pórticos.
-- As reações de todos os exercícios foram refeitas à mão, uma segunda vez, a partir da figura.
-- Os valores no texto estão arredondados com duas casas. Os valores exatos aparecem rodando o script (`python exNN.py`).
+- Cada `exNN.py` calcula as reações com frações exatas e confere o equilíbrio global (ΣF<sub>x</sub>, ΣF<sub>y</sub> e ΣM), M = 0 nas rótulas, pontas livres e apoios de extremidade, e o equilíbrio de momentos nos nós dos pórticos.
+- As reações de todos os exercícios foram refeitas à mão uma segunda vez, a partir da figura.
+- Os momentos nos pontos principais também foram refeitos à mão: 170 em C e 210 em E (04), 125 = 45 + 80 no nó C e 10 no meio da viga (05), 30 em D e E (06), 80 em A, 60 e −10 em C, 50 em E (07), 160 = 120 + 40 no nó E (08), 20 na luva (09), 102,5 na luva (10), 70 no nó C (11), 40 em B e na luva (12), −18,89 e 21,11 em C (13), 30 no meio de BC (14).
+- Os valores no texto estão arredondados com duas casas. Os exatos aparecem rodando o script (`python exNN.py`).
