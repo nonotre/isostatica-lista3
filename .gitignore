@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+
+# lista do professor e recortes dela: só local
+lista03.pdf
+paginas/
